@@ -3,7 +3,7 @@
 #include "uart.h"
 
 //========== Declare the variables ==========================================================================
-uint32_t state_lfsr = 0x11791269;   // Seed for the pseudo-random number generation
+uint32_t state_lfsr = 0x11791269;   // Seed (was given) for the pseudo-random number generation
 uint8_t step;   // Varibale to hold the pseudo-random generated number
 uint8_t disp[] = {SEG_OFF, SEG_OFF};  // Disp initially off
 volatile int sequence_status;   // Sequence playing status (0 or 1)

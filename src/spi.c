@@ -1,7 +1,7 @@
 
 #include "spi.h"
 
-// SPI configuration and spi_write functionality (CAB202, 2023)
+// SPI configuration and spi_write functionality
 void spi_init(void) {
     cli();
     PORTMUX.SPIROUTEA = PORTMUX_SPI0_ALT1_gc;   // SPI pins on PC0-3

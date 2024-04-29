@@ -1,6 +1,6 @@
 #include "adc.h"
 
-void adc_init (void) { // Initialise analogue to digital conversion (Week 9, CAB202, 2023)
+void adc_init (void) { // Initialise analogue to digital conversion
     cli(); // Disbale interrupts
     ADC0.CTRLA = ADC_ENABLE_bm;      // Enable ADC
     ADC0.CTRLB = ADC_PRESC_DIV2_gc;  // /2 clock prescaler 

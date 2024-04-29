@@ -1,6 +1,6 @@
 #include "buzzer.h"
 
-void buzzer_init(void) {    // Initialise the buzzer (CAB202, 2023)
+void buzzer_init(void) {    // Initialise the buzzer
     cli();
     PORTB.OUTSET = PIN0_bm;        // Turn the buzzer off
     PORTB.DIRSET = PIN0_bm;

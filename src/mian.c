@@ -60,7 +60,7 @@ void pb_init(void) {    // Initialise pushbuttons
     PORTA.PIN7CTRL = PORT_PULLUPEN_bm;
 }
 
-void pb_debounce(void) {    // Function for using the debounced button value (Week 10, CAB202, 2023)
+void pb_debounce(void) {    // Function for using the debounced button value
     pb_input = PORTA.IN; // Sample the button's input
     pb_debounced = (pb_input ^ pb_state);
     vcount1 = (vcount1 ^ vcount0) & pb_debounced;  // Vcount1 (bit 1 of vertical counter)
@@ -102,7 +102,7 @@ int main(void) {
     //========== Start the infinite while loop =============================================================
     while (1) {
 
-        //========== Distinguish between rising and falling edge on buttons (Week 11, CAB202, 2023)=========
+        //========== Distinguish between rising and falling edge on buttons =========
         pb_old_state = pb_current_state;
         pb_current_state = pb_state;
         pb_new_state = pb_old_state ^ pb_current_state;
